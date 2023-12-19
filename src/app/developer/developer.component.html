@@ -1,0 +1,13 @@
+
+
+<div *ngIf="developer" class="container mt-4">
+    <h2>{{ developer.firstName }} {{ developer.lastName }}</h2>
+    <p class="mb-2">Age: {{ developer.age }}, Gender: {{ developer.gender }}</p>
+    <p class="mb-4">Bio: {{ developer.bio }}</p>
+    <div class="row">
+      Skilles:
+      <div class="col-md-6" *ngFor="let skill of developer.skills">
+        <app-skill [skill]="skill"></app-skill>
+      </div>
+    </div>
+  </div>
